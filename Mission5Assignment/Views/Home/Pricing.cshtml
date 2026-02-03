@@ -1,0 +1,76 @@
+
+@{
+    ViewData["Title"] = "Pricing - Mission 5 Assignment";
+}
+
+<div class="site-hero text-center">
+    <h1 class="display-5 gradient-text">Tutoring Calculator</h1>
+    <p class="hero-subtitle mx-auto">
+        Enter how many hours you want of Fortnite tutoring and I will tell you the total.
+        This is not a guarantee you will become a pro. This is a guarantee I will try.
+    </p>
+</div>
+
+<div class="loot-badges d-flex flex-wrap justify-content-center gap-3">
+    <div class="badge-card">
+        <span class="badge-label">Hourly rate</span>
+        <span class="badge-value">$25</span>
+    </div>
+    <div class="badge-card">
+        <span class="badge-label">Lesson vibe</span>
+        <span class="badge-value">Chill</span>
+    </div>
+    <div class="badge-card">
+        <span class="badge-label">Build assistance</span>
+        <span class="badge-value">Minimal</span>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 mx-auto">
+        <div class="page-card calc-box">
+            <div class="mb-3">
+                <label for="hoursInput" class="form-label">Hours needed</label>
+                <input id="hoursInput" type="number" class="form-control" placeholder="e.g., 2" min="0" step="0.5" />
+            </div>
+
+            <div class="mb-3">
+                <label for="rateInput" class="form-label">Rate per hour</label>
+                <input id="rateInput" type="text" class="form-control" value="$25.00" readonly />
+            </div>
+
+            <button id="calcBtn" class="btn btn-dark w-100" type="button">Calculate total</button>
+
+            <div class="mt-3">
+                <label for="totalOutput" class="form-label">Total</label>
+                <input id="totalOutput" type="text" class="form-control" value="" readonly />
+            </div>
+
+            <div class="mt-3 text-center">
+                <a href="/" class="btn btn-link">Back to home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="calcCelebration" class="gif-modal" aria-hidden="true">
+    <div class="gif-modal-backdrop"></div>
+    <div class="gif-modal-content">
+        <button class="gif-modal-close" type="button" aria-label="Close celebration">×</button>
+        <p class="gif-modal-title">Fortine coaching > Rent</p>
+        <p class="gif-modal-subtitle">Pretty please pay me? I kind of need V-Bucks.</p>
+        <p class="gif-modal-total">Invoice total: <span id="calcModalTotal">$0.00</span></p>
+
+        <div class="gif-embed-wrapper">
+            <div class="tenor-gif-embed" data-postid="9324381062765074227" data-share-method="host" data-aspect-ratio="0.633588" data-width="100%">
+                <a href="https://tenor.com/view/sigma-gif-9324381062765074227">Banana Victory GIF</a> from
+                <a href="https://tenor.com/search/sigma-gifs">Tenor GIFs</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <script src="~/js/calculator.js"></script>
+}
